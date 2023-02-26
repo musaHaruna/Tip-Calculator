@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <h1>
+      spli <br />
+      tter
+    </h1>
+    <article class="card">
+      <!-- Left section of card for input values -->
+      <article class="input-section">
+        <section>
+          <h2>Bill</h2>
+          <div>
+            <img src="images/icon-dollar.svg" alt="" /><input
+              class="bills"
+              type="text"
+              placeholder="0"
+              autofocus
+            />
+          </div>
+        </section>
+
+        <section>
+          <h2>Select Tip %</h2>
+          <div class="btn-grid">
+            <div><button class="tip active" data-id="5">5%</button></div>
+            <div><button class="tip" data-id="10">10%</button></div>
+            <div><button class="tip" data-id="15">15%</button></div>
+            <div><button class="tip" data-id="20">20%</button></div>
+            <div><button class="tip" data-id="25">25%</button></div>
+            <div><input class="custom" type="text" placeholder="CUSTOM" /></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>
+            Number of people <span class="error-message">Can't be zero</span>
+          </h2>
+          <div>
+            <img src="images/icon-person.svg" alt="" /><input
+              id="error"
+              type="number"
+              value="0"
+            />
+          </div>
+        </section>
+      </article>
+      <!-- End of left section -->
+
+      <!-- Right section for calculation total -->
+      <aside>
+        <section>
+          <div>
+            <h2>Tip Amount</h2>
+            <p>/person</p>
+          </div>
+          <section>
+            <span>$</span>
+            <h2 class="amount per-person">0.00</h2>
+          </section>
+        </section>
+        <section>
+          <div>
+            <h2>Total</h2>
+            <p>/person</p>
+          </div>
+          <section>
+            <span>$</span>
+            <h2 class="amount tip-per-person">0.00</h2>
+          </section>
+        </section>
+        <button class="reset">Reset</button>
+      </aside>
+    </article>
+    <!-- End of right section for calculating result  -->
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;600;700;800&family=Raleway:wght@200;300;400;500;600;700;900&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Light-grayish-cyan);
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+h1 {
+  color: var(--Dark-grayish-cyan);
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.card {
+  width: 50%;
+  display: flex;
+  padding: 1.5rem;
+  border-radius: 10px;
+  gap: 1rem;
+  background-color: var(--White);
+}
+
+input {
+  text-align: right;
+  width: 100%;
+  background-color: var(--Light-grayish-cyan);
+  border: none;
+  padding: 0.2rem;
+  font-size: 18px;
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline-color: var(--Strong-cyan);
+}
+
+input:hover {
+  cursor: pointer;
+  outline-color: var(--Strong-cyan);
+}
+
+/* End of General Styles */
+
+/* Left side (inputs) */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.input-section div {
+  position: relative;
+}
+
+.input-section div img {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.input-section h2 {
+  font-size: 12px;
+  color: var(--Grayish-cyan);
+  margin-bottom: 5px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.btn-grid button {
+  width: 100%;
+  padding: 0.1rem 0;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  border: none;
+  padding: 0.2rem;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+.custom {
+  padding: 0.3rem;
+  padding-right: 0.5rem;
+}
+
+/* End of Left side (inputs) */
+
+/* Right side (Totals) */
+aside {
+  padding: 1rem;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 14px;
+  width: 50%;
+}
+
+aside section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+aside button {
+  width: 100%;
+  display: block;
+  margin-top: 5rem;
+  background-color: hsl(183, 98%, 24%);
+  border: none;
+  color: var(--Grayish-cyan);
+  font-weight: 700;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+aside section h2 {
+  font-size: 12px;
+  color: var(--White);
+}
+
+aside section p {
+  color: var(--Grayish-cyan);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+button {
+  transition: 0.5s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--Strong-cyan);
+}
+
+aside span {
+  font-size: 32px;
+  color: var(--Strong-cyan);
+  align-self: center;
+  margin-top: -12px;
+}
+.amount {
+  color: var(--Strong-cyan);
+  margin-top: -12px;
+  font-size: 32px;
+  align-self: flex-start;
+}
+/* Right side (Totals) */
+
+/* Javascript classes */
+span {
+  display: inline-block;
+}
+
+.error-message {
+  display: none;
+}
+.error {
+  color: red;
+  display: inline-block;
+  margin-left: 5rem;
+}
+
+.tip.active {
+  background-color: var(--Strong-cyan);
+}
+/* Javascript classes */
